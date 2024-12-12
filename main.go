@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
+
+	"github.com/ekilie/vintpm.git/toolkit"
 )
 
 func main() {
@@ -11,7 +13,8 @@ func main() {
 	switch arg {
 	case "update-vint":
 		fmt.Println("Updating vint")
-		break
+		toolkit.Update()
+		// break
 	}
 
 }
