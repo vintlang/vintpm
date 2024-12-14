@@ -4,28 +4,32 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ekilie/vintpm.git/toolkit"
+	"github.com/ekilie/vintpm/toolkit"
 )
 
+// Entry point of the application
 func main() {
 	args := os.Args
-	if len(args)<2{
+
+	// Ensure there's at least one argument
+	if len(args) < 2 {
 		printDefault()
+		return
 	}
 
+	// Handle command-line arguments
 	switch args[1] {
 	case "update-vint":
-		fmt.Println("Updating vint")
+		fmt.Println("Updating Vint...")
 		toolkit.Update()
-		// break
 	default:
 		printDefault()
 	}
-	
-	
 }
 
-func printDefault(){
-	fmt.Println("The official vint package manager (vintpm)")
-
+// Displays the default help message
+func printDefault() {
+	fmt.Println("The official Vint package manager (vintpm)")
+	fmt.Println("Usage:")
+	fmt.Println("  vintpm update-vint   Update the Vint programming language.")
 }
