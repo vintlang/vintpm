@@ -7,6 +7,7 @@ import (
 	"github.com/ekilie/vintpm/toolkit"
 )
 
+
 func main() {
 	args := os.Args
 
@@ -14,6 +15,7 @@ func main() {
 		printDefault()
 		return
 	}
+
 
 	switch args[1] {
 	case "update-vint":
